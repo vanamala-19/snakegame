@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeMania - Ek Gaming Katha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo"></a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <div id="board"></div>
+            <div class="display-score">
+                <div id="scoreBox">Score: 0</div>
+                <div id="hiscoreBox">HiScore: 0</div>
+                <div id="joystick">
+                    <button class="custom-btn btn-2 up" onclick="up()">UP</button>
+                    <button class="custom-btn btn-2 left" onclick="left()">LEFT</button>
+                    <button class="custom-btn btn-2 right" onclick="right()">RIGHT</button>
+                    <button class="custom-btn btn-2 down" onclick="down()">DOWN</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="navigation" onclick="active()">
+        <ul>
+            <li>
+                <h1>settings:</h1>
+            </li>
+            <li>
+                <h2><label for="sound">Music</label>:</label></h2>
+            </li>
+            <li><button class="custom-btn btn-1" onclick="pause()">pause</button><button class="custom-btn btn-1"
+                    onclick="play()">play</button> </li>
+            <li>
+                <h2><label for="sound">Volume</label>:</label></h2>
+            </li>
+            <li>
+                <h2><label for="sound">Music Volume</label>:</label></h2>
+            </li>
+            <li><input type="range" id="musicVolume" min="0" oninput="musicvol()" max="1" step=".01" value=".5" /></li>
+            <li>
+                <h2><label for="sound">Sound Volume</label>:</label></h2>
+            </li>
+            <li><input type="range" id="soundVolume" min="0" oninput="soundvol()" max="1" step=".01" value=".5" /></li>
+            <li>
+                <h2><label for="speed">Speed</label>:</label></h2>
+            </li>
+            <li><input type="range" id="speed" value="5" oninput="s()" name="speed" min="0" max="10"></li>
+            <li>
+            <li>
+                <h2><label for="sound">Delete Hiscore:</label>:</label></h2>
+            </li>
+            <li><button class="custom-btn btn-1" onclick="d()">Delete</button> </li>
+            <h1>modes:</h1>
+            <li>
+            <li>
+                  <label for="strict">
+                    <h4>strict</h4>
+                </label><input type="radio" id="css" name="fav_language" onclick="strict()" value="CSS">
+                  <label for="delay">
+                    <h4>delay</h4>
+                </label><input type="radio" id="css" name="fav_language" onclick="delay()" value="CSS">
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
